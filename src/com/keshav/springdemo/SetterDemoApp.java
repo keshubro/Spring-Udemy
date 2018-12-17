@@ -10,11 +10,13 @@ public class SetterDemoApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		//Retrieve the bean
-		Coach theCoach = context.getBean("myCricketCoach", Coach.class);
+		CricketCoach theCoach = context.getBean("myCricketCoach", CricketCoach.class);
 		
 		//Use the bean
 		System.out.println(theCoach.getDailyFortune());
 		System.out.println(theCoach.getDailyWorkout());
+		System.out.println(theCoach.getEmailAddress());
+		System.out.println(theCoach.getTeam());
 		
 		//Close the context
 		context.close();
