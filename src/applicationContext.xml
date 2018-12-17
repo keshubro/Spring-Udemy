@@ -10,8 +10,15 @@
 	
     <!-- Define your beans here -->
     
+    <bean id = "myFortune"
+    	  class = "com.keshav.springdemo.HappyFortuneService">
+    </bean>
+    
+    
+    
    	<bean id = "myCoach" 
    	      class = "com.keshav.springdemo.TrackCoach">
+   	      <constructor-arg ref = "myFortune" />
    		
    	</bean>
     
